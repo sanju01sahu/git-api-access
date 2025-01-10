@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const {  } = require("../controllers/GitUserController");
+const { searchUser } = require("../controllers/GitUserController");
 
 // Routes beginning with /api/auth
-router.post();
+router.post("/searchUser", searchUser);
 router.post();
 
 module.exports = router;
