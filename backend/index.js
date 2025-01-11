@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
   res.send("API is working");
 });
 
-app.use("/user", GitUserRoute);
+app.use("/gitApi", GitUserRoute);
 
 const mongoURL = process.env.MONGODB_URL;
 const port = process.env.PORT || 8000;
