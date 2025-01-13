@@ -1,35 +1,20 @@
-const dotenv = require('dotenv');
-const express = require('express') ;
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const { connectDB } = require('./db');
-const userRouter = require('./routes/userRoutes');
+const express = require("express");
+const cors = require("cors");
+const { connection } = require("./db");
 
-dotenv.config({path:'./.env'});
-
-const PORT = process.env.PORT || 8080;
 const app = express();
-
-//connectDB();
-
-app.use(express.json());
 app.use(cors());
-//app.use(bodyParser.json());
-app.use('/', userRouter);
+app.use(express.json());
+const userRouter = require("./routes/user.routes");
+app.use("/api", userRouter);
 
-const startServer = async () => {
+app.listen(8080, async () => {
+  console.log("backend is runing");
   try {
-    await connectDB(); 
-    app.listen(PORT, () => {
-      console.log(`Server running on ${PORT}`);
-    });
+    await connection;
+    console.log("connected to db");
   } catch (error) {
-    console.error('Failed to start server:', error.message);
+    console.log(error);
+    console.log("error getting to connect with data base");
   }
-};
-
-startServer();
-
-// app.listen(PORT, () => {
-//   console.log(`Server running on http://localhost:${PORT}`);
-// });
+});
