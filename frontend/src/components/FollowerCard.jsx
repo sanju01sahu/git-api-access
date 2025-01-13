@@ -8,15 +8,7 @@ const FollowerCard = ({ follower }) => {
     <Link to={`/repos/${follower.login}`} style={{ textDecoration: 'none', color: '#007BFF' }}>
 
     <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        border: '1px solid #ccc',
-        borderRadius: '4px',
-        padding: '10px',
-        marginBottom: '10px',
-        cursor: 'pointer',
-      }}
+      className='followerDiv'
     >
 
       <img

@@ -47,25 +47,11 @@ export const Dashboard = () => {
           placeholder="Enter Github username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          style={{
-            padding: '10px',
-            width: '250px',
-            border: '1px solid #ccc',
-            borderRadius: '4px',
-            fontSize: '18px',
-          }}
+          className='input'
         />
         <button
           onClick={handleSubmit}
-          style={{
-            padding: '10px',
-            width: '270px',
-            backgroundColor: '#0d7f25',
-            color: '#fff',
-            fontSize: '18px',
-            border: 'none',
-            borderRadius: '4px',
-          }}
+          className='button-23'
           disabled={loading}
         >
           {loading ? 'Loading...' : 'Submit'}
@@ -77,3 +63,5 @@ export const Dashboard = () => {
     </div>
   );
 };
+
+

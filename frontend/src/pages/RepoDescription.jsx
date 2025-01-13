@@ -8,7 +8,7 @@ export const RepoDescription = () => {
 
 
   return (
-    <div style={{ padding: '20px', maxWidth: '80%', margin: '0 auto', display: 'flex', justifyContent: 'space-between', fontSize: '20px' }}>
+    <div className='repoDiv'>
       <div style={{ width: '28%' }}>
         <img
           src={repo.owner.avatar_url}
@@ -33,10 +33,10 @@ export const RepoDescription = () => {
           <div>
             <p style={{ fontSize: '24px', color: '#4d4b4b' }}>Categories</p>
             <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
-              <button style={{ fontSize: '16px', padding: '8px', color: 'blue' }}>Code review</button>
-              <button style={{ fontSize: '16px', padding: '8px', color: 'blue' }}>IDEs</button>
-              <button style={{ fontSize: '16px', padding: '8px', color: 'blue', backgroundColor: 'white', border: '1px solid #ede1e1' }}>Free</button>
-              <button style={{ fontSize: '16px', padding: '8px', color: 'blue', backgroundColor: 'white', border: '1px solid #ede1e1' }}>Paid</button>
+              <button className='button-23'>Code review</button>
+              <button className='button-27'>IDEs</button>
+              <button className='button-23'>Free</button>
+              <button className='button-27'>Paid</button>
             </div>
 
           </div>
@@ -46,17 +46,7 @@ export const RepoDescription = () => {
 
       <div style={{ textAlign: 'left', width: '68%' }}>
         <h2 style={{ fontSize: '36px' }}>{repo.name}</h2>
-        <button style={{
-          padding: '10px',
-          width: '250px',
-          marginRight: '10px',
-          backgroundColor: '#0d7f25',
-          color: '#fff',
-          fontSize: '18px',
-          border: '1px solid #fff',
-          borderRadius: '4px',
-          cursor: 'pointer',
-        }}>Set up a plan</button>
+        <button className='button-23'>Set up a plan</button>
         <p>
           <strong>Description:</strong> {repo.description || 'No description provided'}
         </p>
