@@ -2,7 +2,7 @@ const GitUser = require("../models/GitUser");
 
 exports.searchUser = async (req, res) => {
   try {
-    const { login } = req.body;
+    const { login } = req.params;
 
     const user = await GitUser.findOne({ login });
 
