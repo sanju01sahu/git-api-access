@@ -1,11 +1,11 @@
 const express = require("express");
 const cors = require("cors");
+const userRouter = require("./routes/user.routes");
 const { connection } = require("./db");
-
 const app = express();
+
 app.use(cors());
 app.use(express.json());
-const userRouter = require("./routes/user.routes");
 app.use("/api", userRouter);
 
 app.listen(8080, async () => {
