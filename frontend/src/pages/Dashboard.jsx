@@ -32,7 +32,7 @@ export const Dashboard = () => {
   return (
     <div style={{paddingTop:'100px'}}>
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Gitify</h1>
+      
       <div
         style={{
           display: 'flex',
