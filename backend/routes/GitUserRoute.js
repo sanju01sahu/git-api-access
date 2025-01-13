@@ -3,7 +3,7 @@ const router = express.Router();
 const { searchUser, getUsers, patchUser, deleteUser } = require("../controllers/GitUserController");
 
 // Routes beginning with /gitApi/
-router.get("/searchUser", searchUser);
+router.get("/searchUser/:login", searchUser);
 router.get("/allUsers", getUsers);
 router.patch("/update/:login", patchUser);
 router.delete("/delete/:login", deleteUser);
