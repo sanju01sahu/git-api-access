@@ -1,32 +1,35 @@
-const express = require("express");
-const app = express();
-const mongoose = require("mongoose");
-const cors = require("cors");
-require("dotenv").config();
-const GitUserRoute = require("./routes/GitUserRoute");
+const dotenv = require('dotenv');
+const express = require('express') ;
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const { connectDB } = require('./db');
+const userRouter = require('./routes/userRoutes');
 
+dotenv.config({path:'./.env'});
+
+const PORT = process.env.PORT || 8080;
+const app = express();
+
+//connectDB();
 
 app.use(express.json());
 app.use(cors());
+//app.use(bodyParser.json());
+app.use('/', userRouter);
 
-app.get("/", (req, res) => {
-  res.send("API is working");
-});
+const startServer = async () => {
+  try {
+    await connectDB(); 
+    app.listen(PORT, () => {
+      console.log(`Server running on http://localhost:${PORT}`);
+    });
+  } catch (error) {
+    console.error('Failed to start server:', error.message);
+  }
+};
 
-app.use("/gitApi", GitUserRoute);
+startServer();
 
-const mongoURL = process.env.MONGODB_URL;
-const port = process.env.PORT || 8000;
-
-app.listen(port, () => {
-    console.log(`Backend is running on port ${port}`);
-    try {
-        mongoose.connect(mongoURL);
-        console.log("Mongodb connected...");
-      } catch (error) {
-        console.log("Error in mongoDB connect ", error);
-      }
-});
-
-
-
+// app.listen(PORT, () => {
+//   console.log(`Server running on http://localhost:${PORT}`);
+// });
