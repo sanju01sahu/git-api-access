@@ -50,7 +50,6 @@ export const Dashboard = () => {
           style={{
             padding: '10px',
             width: '250px',
-            marginRight: '10px',
             border: '1px solid #ccc',
             borderRadius: '4px',
             fontSize: '18px',
@@ -61,13 +60,11 @@ export const Dashboard = () => {
           style={{
             padding: '10px',
             width: '270px',
-            marginRight: '10px',
             backgroundColor: '#0d7f25',
             color: '#fff',
             fontSize: '18px',
             border: 'none',
             borderRadius: '4px',
-            cursor: 'pointer',
           }}
           disabled={loading}
         >

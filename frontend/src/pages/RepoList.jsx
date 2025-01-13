@@ -60,12 +60,12 @@ export const RepoList = () => {
           <div style={{textAlign:'left', display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
           {/* Button/Link to Dashboard Page */}
           <Link to={`/`} style={{ padding: '12px', border: '1px solid #ccc', 
-          borderRadius: '4px', textDecoration: 'none', fontSize:'15px' , backgroundColor:'green',color:'white'}}>
+          borderRadius: '4px', textDecoration: 'none', fontSize:'15px' , backgroundColor:'blue',color:'white'}}>
             Back to Home
           </Link>
           {/* Button/Link to Followers Page */}
           <Link to={`/followers/${userData.username}`} style={{ padding: '12px', border: '1px solid #ccc', 
-          borderRadius: '4px', textDecoration: 'none', fontSize:'15px' , backgroundColor:'green',color:'white'}}>
+          borderRadius: '4px', textDecoration: 'none', fontSize:'15px' , backgroundColor:'blue',color:'white'}}>
             View Followers
           </Link>
         </div>

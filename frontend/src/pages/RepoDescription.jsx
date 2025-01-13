@@ -17,7 +17,7 @@ export const RepoDescription = () => {
         />
         <div style={{ textAlign: 'left', paddingLeft: '10%' }}>
           <div style={{ display: 'flex', gap: '10px' }}>
-            <p><BsFillPatchCheckFill style={{ color: 'green' }} /></p>
+            <p><BsFillPatchCheckFill style={{ color: 'blue' }} /></p>
             <p style={{ color: '#3f3b3b' }}>Verified by GitHub</p>
           </div>
           <p>GitHub Confirms that this app meets the <span style={{ color: 'blue' }}>requirements for verifications.</span></p>

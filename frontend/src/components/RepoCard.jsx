@@ -7,12 +7,8 @@ export const RepoCard = ({ repo, onClick }) => {
       style={{
         display: 'flex',
         alignItems: 'center',
-        // border: '1px solid #f2ecec',
-        // borderRadius: '4px',
         padding: '10px',
         marginBottom: '10px',
-        cursor: 'pointer',
-        // height:'100px'
       }}
       onClick={onClick}
     >
